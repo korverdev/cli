@@ -324,7 +324,7 @@ type cTable struct {
 }
 
 // allocCtable will allocate tables needed for compression.
-// If existing tables a re big enough, they are simply re-used.
+// If existing tables a re big enough, they are simply reused.
 func (s *Scratch) allocCtable() {
 	tableSize := 1 << s.actualTableLog
 	// get tableSymbol that is big enough.

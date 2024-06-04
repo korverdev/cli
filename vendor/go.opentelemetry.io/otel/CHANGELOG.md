@@ -1745,7 +1745,7 @@ with major version 0.
 - `NewExporter` from `exporters/otlp` now takes a `ProtocolDriver` as a parameter. (#1369)
 - Many OTLP Exporter options became gRPC ProtocolDriver options. (#1369)
 - Unify endpoint API that related to OTel exporter. (#1401)
-- Optimize metric histogram aggregator to re-use its slice of buckets. (#1435)
+- Optimize metric histogram aggregator to reuse its slice of buckets. (#1435)
 - Metric aggregator Count() and histogram Bucket.Counts are consistently `uint64`. (1430)
 - Histogram aggregator accepts functional options, uses default boundaries if none given. (#1434)
 - `SamplingResult` now passed a `Tracestate` from the parent `SpanContext` (#1432)

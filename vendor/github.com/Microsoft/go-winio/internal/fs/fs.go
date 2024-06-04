@@ -29,7 +29,7 @@ const NullHandle windows.Handle = 0
 //
 //	GR     Generic Read
 //	GW     Generic Write
-//	GE     Generic Exectue
+//	GE     Generic Execute
 //	GA     Generic All
 //	Resvd  Reserved
 //	AS     Access Security System

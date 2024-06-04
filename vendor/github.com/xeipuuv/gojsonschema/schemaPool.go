@@ -199,7 +199,7 @@ func (p *schemaPool) GetDocument(reference gojsonreference.JsonReference) (*sche
 		return nil, err
 	}
 
-	// add the whole document to the pool for potential re-use
+	// add the whole document to the pool for potential reuse
 	p.parseReferences(document, refToURL, true)
 
 	_, draft, _ = parseSchemaURL(document)

@@ -219,7 +219,7 @@ message NodeStatus {
 
 message Image {
 	// reference is a docker image reference. This can include a rpository, tag
-	// or be fully qualified witha digest. The format is specified in the
+	// or be fully qualified with a digest. The format is specified in the
 	// distribution/reference package.
 	string reference = 1;
 }
@@ -320,7 +320,7 @@ message Mount {
 		// Size sets the size of the tmpfs, in bytes.
 		//
 		// This will be converted to an operating system specific value
-		// depending on the host. For example, on linux, it will be convered to
+		// depending on the host. For example, on linux, it will be converted to
 		// use a 'k', 'm' or 'g' syntax. BSD, though not widely supported with
 		// docker, uses a straight byte value.
 		//
@@ -998,7 +998,7 @@ message EncryptionKey {
 	uint64 lamport_time = 4;
 }
 
-// ManagerStatus provides informations about the state of a manager in the cluster.
+// ManagerStatus provides information about the state of a manager in the cluster.
 message ManagerStatus {
 	// RaftID specifies the internal ID used by the manager in a raft context, it can never be modified
 	// and is used only for information purposes
@@ -1196,7 +1196,7 @@ message Privileges {
 
 // JobStatus indicates the status of a Service that is in one of the Job modes.
 message JobStatus {
-	// JobIteration is the count of how many times the Job has been excecuted,
+	// JobIteration is the count of how many times the Job has been executed,
 	// successfully or otherwise. "Executed" refers to the job as a whole being
 	// started, not to the individual Tasks being launched. This is used to
 	// disambiguate which Tasks belong to which iteration of a Job.
@@ -1380,7 +1380,7 @@ message VolumePublishStatus {
 // plugin.
 message VolumeInfo {
 	// CapacityBytes is the capacity of this volume in bytes. A value of 0
-	// indicates that the capcity is unknown.
+	// indicates that the capacity is unknown.
 	int64 capacity_bytes = 1;
 
 	// VolumeContext includes fields that are opaque to Swarmkit.

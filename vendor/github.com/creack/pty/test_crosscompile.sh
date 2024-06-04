@@ -54,7 +54,7 @@ docker build -t creack-pty-test -f Dockerfile.golang --build-arg=GOVERSION=1.14 
 
 # Run a single test for an old go version. Would be best with go1.0, but not available on Dockerhub.
 # Using 1.6 as it is the base version for the RISCV compiler.
-# Would also be better to run all the tests, not just one, need to refactor this file to allow for specifc archs per version.
+# Would also be better to run all the tests, not just one, need to refactor this file to allow for specific archs per version.
 echo2 "Build for linux - go1.6."
 echo2 "  - linux/amd64"
 docker build -t creack-pty-test -f Dockerfile.golang --build-arg=GOVERSION=1.6 --build-arg=GOOS=linux --build-arg=GOARCH=amd64 .

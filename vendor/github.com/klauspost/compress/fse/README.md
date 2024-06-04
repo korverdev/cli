@@ -38,10 +38,10 @@ These error values can be returned:
 As can be seen above there are errors that will be returned even under normal operation so it is important to handle these.
 
 To reduce allocations you can provide a [`Scratch`](https://godoc.org/github.com/klauspost/compress/fse#Scratch) object 
-that can be re-used for successive calls. Both compression and decompression accepts a `Scratch` object, and the same 
+that can be reused for successive calls. Both compression and decompression accepts a `Scratch` object, and the same 
 object can be used for both.   
 
-Be aware, that when re-using a `Scratch` object that the *output* buffer is also re-used, so if you are still using this
+Be aware, that when reusing a `Scratch` object that the *output* buffer is also reused, so if you are still using this
 you must set the `Out` field in the scratch to nil. The same buffer is used for compression and decompression output.
 
 Decompressing is done by calling the [`Decompress`](https://godoc.org/github.com/klauspost/compress/fse#Decompress) function.

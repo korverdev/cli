@@ -10,9 +10,9 @@
 //	domain-name                     := domain-component ['.' domain-component]*
 //	domain-component                := /([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])/
 //	port-number                     := /[0-9]+/
-//	path-component                  := alpha-numeric [separator alpha-numeric]*
+//	path-component                  := alphanumeric [separator alphanumeric]*
 //	path (or "remote-name")         := path-component ['/' path-component]*
-//	alpha-numeric                   := /[a-z0-9]+/
+//	alphanumeric                    := /[a-z0-9]+/
 //	separator                       := /[_.]|__|[-]*/
 //
 //	tag                             := /[\w][\w.-]{0,127}/

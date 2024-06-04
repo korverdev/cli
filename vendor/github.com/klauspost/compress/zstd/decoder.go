@@ -16,8 +16,8 @@ import (
 // Decoder provides decoding of zstandard streams.
 // The decoder has been designed to operate without allocations after a warmup.
 // This means that you should store the decoder for best performance.
-// To re-use a stream decoder, use the Reset(r io.Reader) error to switch to another stream.
-// A decoder can safely be re-used even if the previous stream failed.
+// To reuse a stream decoder, use the Reset(r io.Reader) error to switch to another stream.
+// A decoder can safely be reused even if the previous stream failed.
 // To release the resources, you must call the Close() function on a decoder.
 type Decoder struct {
 	o decoderOptions

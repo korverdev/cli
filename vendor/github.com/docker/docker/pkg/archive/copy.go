@@ -112,7 +112,7 @@ func TarResourceRebase(sourcePath, rebaseName string) (content io.ReadCloser, er
 	return TarWithOptions(sourceDir, opts)
 }
 
-// TarResourceRebaseOpts does not preform the Tar, but instead just creates the rebase
+// TarResourceRebaseOpts does not perform the Tar, but instead just creates the rebase
 // parameters to be sent to TarWithOptions (the TarOptions struct)
 func TarResourceRebaseOpts(sourceBase string, rebaseName string) *TarOptions {
 	filter := []string{sourceBase}

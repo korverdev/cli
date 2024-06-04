@@ -40,7 +40,7 @@ type NetworkListOptions struct {
 	Filters filters.Args
 }
 
-// NewHijackedResponse intializes a HijackedResponse type
+// NewHijackedResponse initializes a HijackedResponse type
 func NewHijackedResponse(conn net.Conn, mediaType string) HijackedResponse {
 	return HijackedResponse{Conn: conn, Reader: bufio.NewReader(conn), mediaType: mediaType}
 }
@@ -123,7 +123,7 @@ type ImageBuildOptions struct {
 	Target      string
 	SessionID   string
 	Platform    string
-	// Version specifies the version of the unerlying builder to use
+	// Version specifies the version of the underlying builder to use
 	Version BuilderVersion
 	// BuildID is an optional identifier that can be passed together with the
 	// build request. The same identifier can be used to gracefully cancel the

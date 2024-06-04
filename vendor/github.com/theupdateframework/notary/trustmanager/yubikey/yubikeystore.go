@@ -170,7 +170,7 @@ func (y *YubiPrivateKey) setLibLoader(loader pkcs11LibLoader) {
 	y.libLoader = loader
 }
 
-// CryptoSigner returns a crypto.Signer tha wraps the YubiPrivateKey. Needed for
+// CryptoSigner returns a crypto.Signer that wraps the YubiPrivateKey. Needed for
 // Certificate generation only
 func (y *YubiPrivateKey) CryptoSigner() crypto.Signer {
 	return &yubikeySigner{YubiPrivateKey: *y}

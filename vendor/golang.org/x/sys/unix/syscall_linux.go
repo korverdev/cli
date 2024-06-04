@@ -652,7 +652,7 @@ func (sa *SockaddrCANJ1939) sockaddr() (unsafe.Pointer, _Socklen, error) {
 //
 // Once a file descriptor has been returned from Accept, it may be used to
 // perform SHA1 hashing. The descriptor is not safe for concurrent use, but
-// may be re-used repeatedly with subsequent Write and Read operations.
+// may be reused repeatedly with subsequent Write and Read operations.
 //
 // When hashing a small byte slice or string, a single Write and Read may
 // be used:

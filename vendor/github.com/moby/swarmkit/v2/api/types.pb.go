@@ -1593,7 +1593,7 @@ var xxx_messageInfo_NodeStatus proto.InternalMessageInfo
 
 type Image struct {
 	// reference is a docker image reference. This can include a rpository, tag
-	// or be fully qualified witha digest. The format is specified in the
+	// or be fully qualified with a digest. The format is specified in the
 	// distribution/reference package.
 	Reference string `protobuf:"bytes,1,opt,name=reference,proto3" json:"reference,omitempty"`
 }
@@ -1796,7 +1796,7 @@ type Mount_TmpfsOptions struct {
 	// Size sets the size of the tmpfs, in bytes.
 	//
 	// This will be converted to an operating system specific value
-	// depending on the host. For example, on linux, it will be convered to
+	// depending on the host. For example, on linux, it will be converted to
 	// use a 'k', 'm' or 'g' syntax. BSD, though not widely supported with
 	// docker, uses a straight byte value.
 	//
@@ -3297,7 +3297,7 @@ func (m *EncryptionKey) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_EncryptionKey proto.InternalMessageInfo
 
-// ManagerStatus provides informations about the state of a manager in the cluster.
+// ManagerStatus provides information about the state of a manager in the cluster.
 type ManagerStatus struct {
 	// RaftID specifies the internal ID used by the manager in a raft context, it can never be modified
 	// and is used only for information purposes
@@ -4045,7 +4045,7 @@ var xxx_messageInfo_Privileges_AppArmorOpts proto.InternalMessageInfo
 
 // JobStatus indicates the status of a Service that is in one of the Job modes.
 type JobStatus struct {
-	// JobIteration is the count of how many times the Job has been excecuted,
+	// JobIteration is the count of how many times the Job has been executed,
 	// successfully or otherwise. "Executed" refers to the job as a whole being
 	// started, not to the individual Tasks being launched. This is used to
 	// disambiguate which Tasks belong to which iteration of a Job.
@@ -4404,7 +4404,7 @@ var xxx_messageInfo_VolumePublishStatus proto.InternalMessageInfo
 // plugin.
 type VolumeInfo struct {
 	// CapacityBytes is the capacity of this volume in bytes. A value of 0
-	// indicates that the capcity is unknown.
+	// indicates that the capacity is unknown.
 	CapacityBytes int64 `protobuf:"varint,1,opt,name=capacity_bytes,json=capacityBytes,proto3" json:"capacity_bytes,omitempty"`
 	// VolumeContext includes fields that are opaque to Swarmkit.
 	VolumeContext map[string]string `protobuf:"bytes,2,rep,name=volume_context,json=volumeContext,proto3" json:"volume_context,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`

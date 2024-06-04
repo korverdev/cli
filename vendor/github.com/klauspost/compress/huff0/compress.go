@@ -9,8 +9,8 @@ import (
 
 // Compress1X will compress the input.
 // The output can be decoded using Decompress1X.
-// Supply a Scratch object. The scratch object contains state about re-use,
-// So when sharing across independent encodes, be sure to set the re-use policy.
+// Supply a Scratch object. The scratch object contains state about reuse,
+// So when sharing across independent encodes, be sure to set the reuse policy.
 func Compress1X(in []byte, s *Scratch) (out []byte, reUsed bool, err error) {
 	s, err = s.prepare(in)
 	if err != nil {
@@ -22,8 +22,8 @@ func Compress1X(in []byte, s *Scratch) (out []byte, reUsed bool, err error) {
 // Compress4X will compress the input. The input is split into 4 independent blocks
 // and compressed similar to Compress1X.
 // The output can be decoded using Decompress4X.
-// Supply a Scratch object. The scratch object contains state about re-use,
-// So when sharing across independent encodes, be sure to set the re-use policy.
+// Supply a Scratch object. The scratch object contains state about reuse,
+// So when sharing across independent encodes, be sure to set the reuse policy.
 func Compress4X(in []byte, s *Scratch) (out []byte, reUsed bool, err error) {
 	s, err = s.prepare(in)
 	if err != nil {
@@ -97,7 +97,7 @@ func compress(in []byte, s *Scratch, compressor func(src []byte) ([]byte, error)
 		if s.Reuse == ReusePolicyMust {
 			return nil, false, ErrIncompressible
 		}
-		// Do not attempt to re-use later.
+		// Do not attempt to reuse later.
 		s.prevTable = s.prevTable[:0]
 	}
 
@@ -116,7 +116,7 @@ func compress(in []byte, s *Scratch, compressor func(src []byte) ([]byte, error)
 		oldSize := s.prevTable.estimateSize(s.count[:s.symbolLen])
 		newSize := s.cTable.estimateSize(s.count[:s.symbolLen])
 		if oldSize <= hSize+newSize || hSize+12 >= wantSize {
-			// Retain cTable even if we re-use.
+			// Retain cTable even if we reuse.
 			keepTable := s.cTable
 			keepTL := s.actualTableLog
 

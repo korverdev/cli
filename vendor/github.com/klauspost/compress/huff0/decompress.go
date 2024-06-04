@@ -171,7 +171,7 @@ func ReadTable(in []byte, s *Scratch) (s2 *Scratch, remain []byte, err error) {
 // Decompress1X will decompress a 1X encoded stream.
 // The length of the supplied input must match the end of a block exactly.
 // Before this is called, the table must be initialized with ReadTable unless
-// the encoder re-used the table.
+// the encoder reused the table.
 // deprecated: Use the stateless Decoder() to get a concurrent version.
 func (s *Scratch) Decompress1X(in []byte) (out []byte, err error) {
 	if cap(s.Out) < s.MaxDecodedSize {
@@ -184,7 +184,7 @@ func (s *Scratch) Decompress1X(in []byte) (out []byte, err error) {
 
 // Decompress4X will decompress a 4X encoded stream.
 // Before this is called, the table must be initialized with ReadTable unless
-// the encoder re-used the table.
+// the encoder reused the table.
 // The length of the supplied input must match the end of a block exactly.
 // The destination size of the uncompressed data must be known and provided.
 // deprecated: Use the stateless Decoder() to get a concurrent version.

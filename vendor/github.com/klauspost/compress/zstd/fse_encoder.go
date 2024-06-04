@@ -77,7 +77,7 @@ func (s *fseEncoder) HistogramFinished(maxSymbol uint8, maxCount int) {
 }
 
 // allocCtable will allocate tables needed for compression.
-// If existing tables a re big enough, they are simply re-used.
+// If existing tables a re big enough, they are simply reused.
 func (s *fseEncoder) allocCtable() {
 	tableSize := 1 << s.actualTableLog
 	// get tableSymbol that is big enough.

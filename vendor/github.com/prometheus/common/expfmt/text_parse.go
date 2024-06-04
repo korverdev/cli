@@ -54,7 +54,7 @@ type TextParser struct {
 	err                  error         // Most recent error.
 	lineCount            int           // Tracks the line count for error messages.
 	currentByte          byte          // The most recent byte read.
-	currentToken         bytes.Buffer  // Re-used each time a token has to be gathered from multiple bytes.
+	currentToken         bytes.Buffer  // reused each time a token has to be gathered from multiple bytes.
 	currentMF            *dto.MetricFamily
 	currentMetric        *dto.Metric
 	currentLabelPair     *dto.LabelPair

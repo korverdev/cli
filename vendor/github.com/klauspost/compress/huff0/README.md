@@ -43,15 +43,15 @@ These error values can be returned:
 As can be seen above some of there are errors that will be returned even under normal operation so it is important to handle these.
 
 To reduce allocations you can provide a [`Scratch`](https://godoc.org/github.com/klauspost/compress/huff0#Scratch) object 
-that can be re-used for successive calls. Both compression and decompression accepts a `Scratch` object, and the same 
+that can be reused for successive calls. Both compression and decompression accepts a `Scratch` object, and the same 
 object can be used for both.   
 
-Be aware, that when re-using a `Scratch` object that the *output* buffer is also re-used, so if you are still using this
+Be aware, that when re-using a `Scratch` object that the *output* buffer is also reused, so if you are still using this
 you must set the `Out` field in the scratch to nil. The same buffer is used for compression and decompression output.
 
-The `Scratch` object will retain state that allows to re-use previous tables for encoding and decoding.  
+The `Scratch` object will retain state that allows to reuse previous tables for encoding and decoding.  
 
-## Tables and re-use
+## Tables and reuse
 
 Huff0 allows for reusing tables from the previous block to save space if that is expected to give better/faster results. 
 

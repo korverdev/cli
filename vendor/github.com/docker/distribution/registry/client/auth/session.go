@@ -506,7 +506,7 @@ type basicHandler struct {
 	creds CredentialStore
 }
 
-// NewBasicHandler creaters a new authentiation handler which adds
+// NewBasicHandler creates a new authentiation handler which adds
 // basic authentication credentials to a request.
 func NewBasicHandler(creds CredentialStore) AuthenticationHandler {
 	return &basicHandler{

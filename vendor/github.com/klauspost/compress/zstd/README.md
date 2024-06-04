@@ -331,7 +331,7 @@ To add a dictionary use the `WithDecoderDicts(dicts ...[]byte)` option with the 
 Several dictionaries can be added at once.
 
 The dictionary will be used automatically for the data that specifies them.
-A re-used Decoder will still contain the dictionaries registered.
+A reused Decoder will still contain the dictionaries registered.
 
 When registering multiple dictionaries with the same ID, the last one will be used.
 
@@ -355,8 +355,8 @@ This will likely be improved over time. Just be aware to test performance when i
 The decoder has been designed to operate without allocations after a warmup. 
 
 This means that you should *store* the decoder for best performance. 
-To re-use a stream decoder, use the `Reset(r io.Reader) error` to switch to another stream.
-A decoder can safely be re-used even if the previous stream failed.
+To reuse a stream decoder, use the `Reset(r io.Reader) error` to switch to another stream.
+A decoder can safely be reused even if the previous stream failed.
 
 To release the resources, you must call the `Close()` function on a decoder.
 After this it can *no longer be reused*, but all running goroutines will be stopped.

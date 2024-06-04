@@ -170,7 +170,7 @@ func main() {
     "number": 100,
   }).Fatal("The ice breaks!")
 
-  // A common pattern is to re-use fields between logging statements by re-using
+  // A common pattern is to reuse fields between logging statements by reusing
   // the logrus.Entry returned from WithFields()
   contextLogger := log.WithFields(log.Fields{
     "common": "this is a common field",
@@ -219,7 +219,7 @@ func main() {
 #### Fields
 
 Logrus encourages careful, structured logging through logging fields instead of
-long, unparseable error messages. For example, instead of: `log.Fatalf("Failed
+long, unparsable error messages. For example, instead of: `log.Fatalf("Failed
 to send event %s to topic %s with key %d")`, you should log the much more
 discoverable:
 

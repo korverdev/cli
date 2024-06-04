@@ -47,13 +47,13 @@ const (
 	// ReusePolicyAllow will allow reuse if it produces smaller output.
 	ReusePolicyAllow ReusePolicy = iota
 
-	// ReusePolicyPrefer will re-use aggressively if possible.
+	// ReusePolicyPrefer will reuse aggressively if possible.
 	// This will not check if a new table will produce smaller output,
 	// except if the current table is impossible to use or
 	// compressed output is bigger than input.
 	ReusePolicyPrefer
 
-	// ReusePolicyNone will disable re-use of tables.
+	// ReusePolicyNone will disable reuse of tables.
 	// This is slightly faster than ReusePolicyAllow but may produce larger output.
 	ReusePolicyNone
 
@@ -69,9 +69,9 @@ type Scratch struct {
 	// Do not touch, unless you know what you are doing.
 
 	// Out is output buffer.
-	// If the scratch is re-used before the caller is done processing the output,
+	// If the scratch is reused before the caller is done processing the output,
 	// set this field to nil.
-	// Otherwise the output buffer will be re-used for next Compression/Decompression step
+	// Otherwise the output buffer will be reused for next Compression/Decompression step
 	// and allocation will be avoided.
 	Out []byte
 
@@ -228,7 +228,7 @@ func (c cTable) write(s *Scratch) error {
 			s.Out = append(s.Out, b...)
 			return nil
 		}
-		// Unable to compress (RLE/uncompressible)
+		// Unable to compress (RLE/incompressible)
 	}
 	// write raw values as 4-bits (max : 15)
 	if maxSymbolValue > (256 - 128) {
@@ -297,7 +297,7 @@ func (c cTable) estTableSize(s *Scratch) (sz int, err error) {
 			sz += 1 + len(b)
 			return sz, nil
 		}
-		// Unable to compress (RLE/uncompressible)
+		// Unable to compress (RLE/incompressible)
 	}
 	// write raw values as 4-bits (max : 15)
 	if maxSymbolValue > (256 - 128) {

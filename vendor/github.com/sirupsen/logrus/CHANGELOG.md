@@ -21,7 +21,7 @@ Code quality:
 
 Fixes:
   * small fixes about new go 1.13 error formatting system
-  * Fix for long time race condiction with mutating data hooks
+  * Fix for long time race condition with mutating data hooks
 
 Features:
   * build support for zos
@@ -37,7 +37,7 @@ Features:
 # 1.6.0
 Fixes:
   * end of line cleanup
-  * revert the entry concurrency bug fix whic leads to deadlock under some circumstances
+  * revert the entry concurrency bug fix which leads to deadlock under some circumstances
   * update dependency on go-windows-terminal-sequences to fix a crash with go 1.14
 
 Features:
@@ -120,7 +120,7 @@ This new release introduces:
   * an indent configuration for the json formatter
   * output colour support for windows
   * the field sort function is now configurable for text formatter
-  * the CLICOLOR and CLICOLOR\_FORCE environment variable support in text formater
+  * the CLICOLOR and CLICOLOR\_FORCE environment variable support in text formatter
 
 # 1.0.6
 
@@ -129,7 +129,7 @@ This new release introduces:
     which is mostly useful for logger wrapper
   * a fix reverting the immutability of the entry given as parameter to the hooks
     a new configuration field of the json formatter in order to put all the fields
-    in a nested dictionnary
+    in a nested dictionary
   * a new SetOutput method in the Logger
   * a new configuration of the textformatter to configure the name of the default keys
   * a new configuration of the text formatter to disable the level truncation

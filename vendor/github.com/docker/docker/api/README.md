@@ -24,7 +24,7 @@ The API documentation is generated entirely from `api/swagger.yaml`. If you make
 
 The file is split into two main sections:
 
-- `definitions`, which defines re-usable objects used in requests and responses
+- `definitions`, which defines reusable objects used in requests and responses
 - `paths`, which defines the API endpoints (and some inline objects which don't need to be reusable)
 
 To make an edit, first look for the endpoint you want to edit under `paths`, then make the required edits. Endpoints may reference reusable objects with `$ref`, which can be found in the `definitions` section.

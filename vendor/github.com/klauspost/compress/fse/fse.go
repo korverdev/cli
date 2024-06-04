@@ -58,9 +58,9 @@ type Scratch struct {
 	// Do not touch, unless you know what you are doing.
 
 	// Out is output buffer.
-	// If the scratch is re-used before the caller is done processing the output,
+	// If the scratch is reused before the caller is done processing the output,
 	// set this field to nil.
-	// Otherwise the output buffer will be re-used for next Compression/Decompression step
+	// Otherwise the output buffer will be reused for next Compression/Decompression step
 	// and allocation will be avoided.
 	Out []byte
 
