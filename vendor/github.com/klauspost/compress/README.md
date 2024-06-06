@@ -53,7 +53,7 @@ This package provides various compression algorithms.
 	* zstd: Various minor improvements by @greatroar in https://github.com/klauspost/compress/pull/788 https://github.com/klauspost/compress/pull/794 https://github.com/klauspost/compress/pull/795
 	* s2: Fix huge block overflow https://github.com/klauspost/compress/pull/779
 	* s2: Allow CustomEncoder fallback https://github.com/klauspost/compress/pull/780
-	* gzhttp: Suppport ResponseWriter Unwrap() in gzhttp handler by @jgimenez in https://github.com/klauspost/compress/pull/799
+	* gzhttp: Support ResponseWriter Unwrap() in gzhttp handler by @jgimenez in https://github.com/klauspost/compress/pull/799
 
 * Mar 13, 2023 - [v1.16.1](https://github.com/klauspost/compress/releases/tag/v1.16.1)
 	* zstd: Speed up + improve best encoder by @greatroar in https://github.com/klauspost/compress/pull/776
@@ -107,7 +107,7 @@ This package provides various compression algorithms.
 	* zstd: Add [WithDecodeAllCapLimit](https://pkg.go.dev/github.com/klauspost/compress@v1.15.10/zstd#WithDecodeAllCapLimit) https://github.com/klauspost/compress/pull/649
 	* Add Go 1.19 - deprecate Go 1.16  https://github.com/klauspost/compress/pull/651
 	* flate: Improve level 5+6 compression https://github.com/klauspost/compress/pull/656
-	* zstd: Improve "better" compresssion  https://github.com/klauspost/compress/pull/657
+	* zstd: Improve "better" compression  https://github.com/klauspost/compress/pull/657
 	* s2: Improve "best" compression https://github.com/klauspost/compress/pull/658
 	* s2: Improve "better" compression. https://github.com/klauspost/compress/pull/635
 	* s2: Slightly faster non-assembly decompression https://github.com/klauspost/compress/pull/646
@@ -310,7 +310,7 @@ While the release has been extensively tested, it is recommended to testing when
 	* s2: Fix binaries.
 
 * Feb 25, 2021 (v1.11.8)
-	* s2: Fixed occational out-of-bounds write on amd64. Upgrade recommended.
+	* s2: Fixed occasional out-of-bounds write on amd64. Upgrade recommended.
 	* s2: Add AMD64 assembly for better mode. 25-50% faster. [#315](https://github.com/klauspost/compress/pull/315)
 	* s2: Less upfront decoder allocation. [#322](https://github.com/klauspost/compress/pull/322)
 	* zstd: Faster "compression" of incompressible data. [#314](https://github.com/klauspost/compress/pull/314)
@@ -507,7 +507,7 @@ While the release has been extensively tested, it is recommended to testing when
 * Nov 17 2015: Fixed out-of-bound errors if the underlying Writer returned an error. See [#15](https://github.com/klauspost/compress/issues/15).
 * Nov 12 2015: Added [io.WriterTo](https://golang.org/pkg/io/#WriterTo) support to gzip/inflate.
 * Nov 11 2015: Merged [CL 16669](https://go-review.googlesource.com/#/c/16669/4): archive/zip: enable overriding (de)compressors per file
-* Oct 15 2015: Added skipping on uncompressible data. Random data speed up >5x.
+* Oct 15 2015: Added skipping on incompressible data. Random data speed up >5x.
 
 </details>
 
